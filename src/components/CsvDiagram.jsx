@@ -19,7 +19,7 @@ const CsvDiagram = () => {
   const [data, setData] = useState([]);
   const [minTime, setMinTime] = useState("");
   const [maxTime, setMaxTime] = useState("");
-  const [chartType, setChartType] = useState("line");
+  const [chartType, setChartType] = useState("pie");
 
   //Data sorted for linechart
   const processed = useMemo(() => {
@@ -113,9 +113,9 @@ const CsvDiagram = () => {
 
       <h3>Choose Diagram Type</h3>
       <select value={chartType} onChange={(e) => setChartType(e.target.value)}>
+        <option value="pie">Pie Chart</option>
         <option value="line">Line Chart</option>
         <option value="bar">Bar Chart</option>
-        <option value="pie">Pie Chart</option>
       </select>
       <br/>
       <br/>
