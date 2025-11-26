@@ -1,28 +1,23 @@
-import { useState } from "react";
-import axios from "axios";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  BarChart,
-  Bar,
-  PieChart,
-  Pie,
-  Cell,
-} from "recharts";
 import CsvDiagram from "./components/CsvDiagram";
+import Product from "./components/Product";
 
 function App() {
-  
-
   return (
     <>
-    <h1>Statistic Nonsense</h1>
-    <CsvDiagram />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          height: "100%",
+          alignItems: "center"
+        }}
+      >
+        <h1>Statistic Nonsense</h1>
+        <CsvDiagram />
+        <hr style={{ width: "100%", border: "1px solid #ccc" }} />
+        <Product />
+      </div>
     </>
   );
 }
