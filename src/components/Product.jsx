@@ -10,7 +10,7 @@ import "../Product.css";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
-  const [form, setForm] = useState({ id: null, name: "", price: "" });
+  const [form, setForm] = useState({ id: null, name: "", price: "", quantity: "" });
   const [isEditing, setIsEditing] = useState(false);
 
   const load = async () => {
@@ -28,6 +28,7 @@ export default function Product() {
     const product = {
       name: form.name,
       price: parseFloat(form.price),
+      quantity: parseInt(form.quantity)
     };
 
     if (isEditing) {
@@ -36,13 +37,13 @@ export default function Product() {
       await addProduct(product);
     }
 
-    setForm({ id: null, name: "", price: "" });
+    setForm({ id: null, name: "", price: "", quantity: "" });
     setIsEditing(false);
     await load();
   };
 
   const handleEdit = (p) => {
-    setForm({ id: p.id, name: p.name, price: p.price });
+    setForm({ id: p.id, name: p.name, price: p.price, quantity: p.quantity });
     setIsEditing(true);
   };
 
@@ -83,6 +84,18 @@ export default function Product() {
             required
           />
 
+          <input
+            className="crud-input"
+            type="number"
+            step="1"
+            placeholder="Quantity"
+            value={form.quantity}
+            onChange={(e) =>
+              setForm({ ...form, quantity: e.target.value })
+            }
+            required
+          />
+
           <button className="crud-btn btn-primary" type="submit">
             {isEditing ? "Update" : "Add"}
           </button>
@@ -93,7 +106,7 @@ export default function Product() {
               type="button"
               onClick={() => {
                 setIsEditing(false);
-                setForm({ id: null, name: "", price: "" });
+                setForm({ id: null, name: "", price: "", quantity: "" });
               }}
             >
               Cancel
@@ -106,7 +119,8 @@ export default function Product() {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Price</th>
+            <th>Price Each</th>
+            <th>Quantity</th>
             <th className="crud-actions">Actions</th>
           </tr>
         </thead>
@@ -115,6 +129,7 @@ export default function Product() {
             <tr key={p.id}>
               <td>{p.name}</td>
               <td>${p.price.toFixed(2)}</td>
+              <td>{p.quantity}</td>
               <td className="crud-actions">
                 <button
                   className="crud-btn btn-warning"
