@@ -90,11 +90,11 @@ const CsvDiagram = () => {
   const pieColors = ["#ff5733", "#3399ff"];
 
   return (
-    <div style={{ padding: 30 }}>
+    <div style={{margin:"20px"}}>
       <br />
       <h2>Read and write data from and to a CSV file</h2>
-      <h5>Click on either like button to add log, with button selection and timestamp, in csv file which will be displayed in diagram</h5>
-      <hr />
+      <h5>Click on either like button to add log, with button 
+        selection and timestamp, in csv file which will be displayed in diagram</h5>
 
       <button
         className="buttonA"

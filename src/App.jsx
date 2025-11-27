@@ -1,4 +1,5 @@
 import CsvDiagram from "./components/CsvDiagram";
+
 import Product from "./components/Product";
 import ProductDiagram from "./components/ProductDiagram";
 
@@ -11,14 +12,13 @@ function App() {
           flexDirection: "column",
           justifyContent: "center",
           height: "100%",
-          alignItems: "center"
+          alignItems: "center",
+          marginTop: "-400px"
         }}
       >
         <h1>Statistic Nonsense</h1>
-        <CsvDiagram />
-        <hr style={{ width: "100%", border: "1px solid #ccc" }} />
-        <Product />
-        <ProductDiagram />
+        <p>Homepage</p>
+        
       </div>
     </>
   );
