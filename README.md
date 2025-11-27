@@ -1,6 +1,6 @@
 # Statistic Nonsense
 
-<p>This is a React Vite SPA project where I'm testing different charts types from recharts. Data is gathered from Csv file and MySql db, the api is in statisticNonsense in Java which need to be running in order for this to work.</p>
+<p>This is a React Vite SPA project where I'm testing different charts types from recharts. Data is gathered from Csv file and MySql db, the api "statisticNonsense" needs to be running in order for this to work.</p>
 <p>This project uses the following dependencies:</p>
 <ul>react-router-dom</ul>
 <ul>react-bootstrap</ul>
