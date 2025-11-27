@@ -1,5 +1,6 @@
 import CsvDiagram from "./components/CsvDiagram";
 import Product from "./components/Product";
+import ProductDiagram from "./components/ProductDiagram";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <CsvDiagram />
         <hr style={{ width: "100%", border: "1px solid #ccc" }} />
         <Product />
+        <ProductDiagram />
       </div>
     </>
   );
