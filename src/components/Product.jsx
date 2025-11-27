@@ -7,6 +7,7 @@ import {
 } from "../api/products";
 
 import "../Product.css";
+import ProductDiagram from "./ProductDiagram";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
@@ -53,7 +54,7 @@ export default function Product() {
   };
 
   return (
-    <div className="crud-container">
+    <div className="crud-container" style={{margin:"20px"}}>
       <h1 className="crud-title">Product Manager</h1>
       <h5>Add, update or delete items in database in order to view corresponding charts</h5>
 
@@ -148,6 +149,7 @@ export default function Product() {
           ))}
         </tbody>
       </table>
+      <ProductDiagram />
     </div>
   );
 }
