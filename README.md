@@ -1,16 +1,21 @@
-# React + Vite
+# Statistic Nonsense
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>This is a React Vite SPA project where I'm testing different charts types from recharts. Data is gathered from Csv file and MySql db, the api is in statisticNonsense in Java which need to be running in order for this to work.</p>
+<p>This project uses the following dependencies:</p>
+<ul>react-router-dom</ul>
+<ul>react-bootstrap</ul>
+<ul>axios</ul>
+<ul>recharts</ul>
+<p>In order to run the application you need to install these by "npm install"</p>
+<br />
+<p>Page for adding and displaying data from csv file:</p>
+<img width="797" height="955" alt="image" src="https://github.com/user-attachments/assets/a9273a69-7516-4309-817a-2c7765bfb6b7" />
+<p>Here you can add data to Csv file by clicking on either button, data can be optionally filtered by time, then you can choose to display pie, line or bar chart.</p>
+<br />
+<p>Page for product CRUD operations and a couple more charts:</p>
+<img width="962" height="1082" alt="image" src="https://github.com/user-attachments/assets/ca867573-c9e8-4bb8-bb06-cfb8797287e0" />
+<p>Here user can add, remove or edit products and display corresponding data for these by "Donut chart"(quantity), "Scatterplot"(price vs quantity), "Histogram"(price groups) or "Column chart"(total value).</p>
+<br />
+<p>Happy coding!</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
